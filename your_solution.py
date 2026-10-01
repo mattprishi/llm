@@ -29,32 +29,77 @@ NUM_SHARDS = 32
 VALIDATION_SIZE = 5000
 
 
-# TODO: Configure training parameters
+# # TODO: Configure training parameters
+# TRAINING_CONFIG = {
+#     "output_dir": f"{OUTPUT_DIR}/qwen3-1b-russian",
+#     "optim": "adamw_torch_fused",
+#     "num_train_epochs": 1,
+#     "per_device_train_batch_size": 32,
+#     "per_device_eval_batch_size": 64,
+#     "gradient_accumulation_steps": 4,  # Effective Batch Size = 32 * 4 * 512 = 65,536 tokens/step
+#     "learning_rate": 6e-4,  # Standard peak LR for 1B pretraining from scratch
+#     "weight_decay": 0.01,
+#     "lr_scheduler_type": "cosine",
+#     "warmup_steps": 50,  # Rapid warmup for 15-min run
+#     "logging_steps": 5,
+#     "eval_steps": 50,
+#     "eval_strategy": "steps",
+#     "save_steps": 100,
+#     "save_total_limit": 2,
+#     "load_best_model_at_end": True,
+#     "metric_for_best_model": "eval_loss",
+#     "bf16": True,
+#     "tf32": True,
+#     "gradient_checkpointing": False,  # Not needed for 512 seq_len on 80GB VRAM
+#     "dataloader_num_workers": 8,
+#     "dataloader_pin_memory": True,
+#     "torch_compile": False,  # Set False to avoid 2-3 min JIT compilation overhead during 15-min budget
+#     "report_to": "none",
+# }
+# TRAINING_CONFIG = {
+#     'output_dir': f'{OUTPUT_DIR}/qwen3-1b-russian',
+#     'optim': 'adamw_torch_fused',
+#     'num_train_epochs': 1,
+#     'per_device_train_batch_size': 32,       
+#     'per_device_eval_batch_size': 64,        # Валидация быстрее за счет отсутствия backward
+#     'gradient_accumulation_steps': 2,        # обновляем чаще
+#     'learning_rate': 8e-4,                   # агрессивный для быстрого спуска
+#     'weight_decay': 0.01,
+#     'lr_scheduler_type': 'cosine',
+#     'warmup_steps': 30,                      # быстрее прогрев
+#     'logging_steps': 5,                      # точки для детального графика Train Loss
+#     'eval_steps': 100,                       # реже получаем точки для графика Eval Loss (без просадки времени)
+#     'eval_strategy': 'steps',
+#     'save_strategy': 'no',                   # не тратим время и диск на промежуточные веса
+#     'bf16': True,
+#     'tf32': True,
+#     'gradient_checkpointing': False,
+#     'dataloader_num_workers': 8,
+#     'dataloader_pin_memory': True,
+#     'torch_compile': False,
+#     'report_to': 'none',
+# }
 TRAINING_CONFIG = {
-    "output_dir": f"{OUTPUT_DIR}/qwen3-1b-russian",
-    "optim": "adamw_torch_fused",
-    "num_train_epochs": 1,
-    "per_device_train_batch_size": 32,
-    "per_device_eval_batch_size": 64,
-    "gradient_accumulation_steps": 4,  # Effective Batch Size = 32 * 4 * 512 = 65,536 tokens/step
-    "learning_rate": 6e-4,  # Standard peak LR for 1B pretraining from scratch
-    "weight_decay": 0.01,
-    "lr_scheduler_type": "cosine",
-    "warmup_steps": 50,  # Rapid warmup for 15-min run
-    "logging_steps": 5,
-    "eval_steps": 50,
-    "eval_strategy": "steps",
-    "save_steps": 100,
-    "save_total_limit": 2,
-    "load_best_model_at_end": True,
-    "metric_for_best_model": "eval_loss",
-    "bf16": True,
-    "tf32": True,
-    "gradient_checkpointing": False,  # Not needed for 512 seq_len on 80GB VRAM
-    "dataloader_num_workers": 8,
-    "dataloader_pin_memory": True,
-    "torch_compile": False,  # Set False to avoid 2-3 min JIT compilation overhead during 15-min budget
-    "report_to": "none",
+    'output_dir': f'{OUTPUT_DIR}/qwen3-1b-russian',
+    'optim': 'adamw_torch_fused',
+    'num_train_epochs': 1,
+    'per_device_train_batch_size': 32,
+    'per_device_eval_batch_size': 64,
+    'gradient_accumulation_steps': 1,        # еще чаще
+    'learning_rate': 1e-3,                   # еще агрессивнее
+    'weight_decay': 0.01,
+    'lr_scheduler_type': 'cosine',
+    'warmup_steps': 20,                      # еще быстрее
+    'logging_steps': 5,
+    'eval_strategy': 'no',                   # 100% времени только на обучение
+    'save_strategy': 'no',
+    'bf16': True,
+    'tf32': True,
+    'gradient_checkpointing': False,
+    'dataloader_num_workers': 8,
+    'dataloader_pin_memory': True,
+    'torch_compile': False,
+    'report_to': 'none',
 }
 
 
