@@ -89,6 +89,14 @@ EXPERIMENTS: dict[str, dict[str, Any]] = {
         "per_device_train_batch_size": 64,
         "gradient_accumulation_steps": 1,
     },
+    "batch48": {
+        "per_device_train_batch_size": 48,
+        "gradient_accumulation_steps": 1,
+    },
+    "batch16_accum4": {
+        "per_device_train_batch_size": 16,
+        "gradient_accumulation_steps": 4,
+    },
     "checkpointing": {"gradient_checkpointing": True},
     "flash_attention_2": {"attention_implementation": "flash_attention_2"},
     "torch_compile": {"torch_compile": True},
@@ -114,6 +122,17 @@ EXPERIMENTS: dict[str, dict[str, Any]] = {
         "gradient_accumulation_steps": 1,
         "packing": True,
         "use_liger_kernel": True,
+    },
+    "batch48_fa2": {
+        "attention_implementation": "flash_attention_2",
+        "per_device_train_batch_size": 48,
+        "gradient_accumulation_steps": 1,
+    },
+    "batch48_fa2_packing": {
+        "attention_implementation": "flash_attention_2",
+        "per_device_train_batch_size": 48,
+        "gradient_accumulation_steps": 1,
+        "packing": True,
     },
 }
 

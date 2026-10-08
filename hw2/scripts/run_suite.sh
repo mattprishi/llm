@@ -6,8 +6,21 @@ mkdir -p logs results
 
 run_experiment() {
     local experiment="$1"
-    local run_name="$2"
+    local requested_name="$2"
     local seconds="$3"
+    local run_name="${requested_name}"
+
+    if [[ -f "results/${run_name}/summary.json" ]]; then
+        echo "SKIP: ${run_name} already has summary.json"
+        return 0
+    fi
+
+    # Preserve failed runs for the report and choose a fresh output directory.
+    local retry=2
+    while [[ -e "results/${run_name}" ]]; do
+        run_name="${requested_name}_retry${retry}"
+        retry=$((retry + 1))
+    done
 
     echo "=== ${run_name}: config=${experiment}, seconds=${seconds} ==="
     EXPERIMENT="${experiment}" RUN_NAME="${run_name}" TRAIN_SECONDS="${seconds}" \
@@ -22,18 +35,20 @@ run_experiment() {
 # The required five-minute baseline.
 run_experiment baseline baseline_300s 300 || exit 1
 
-# Ten short runs cover five individual mechanisms and several combinations.
+# The first suite already established two machine-specific negative results:
+# batch64 OOMs, while torch.compile and Liger cannot load Triton kernels with
+# driver 470. Keep those logs, but do not waste the remaining GPU window by
+# repeating them. The runs below still cover five mechanisms and combinations.
 screening_configs=(
-    batch64
+    batch48
+    batch16_accum4
     checkpointing
     flash_attention_2
-    torch_compile
-    liger
     activation_offloading
     fa2_padding_free
     fa2_packing
-    batch64_fa2_packing
-    batch64_fa2_packing_liger
+    batch48_fa2
+    batch48_fa2_packing
 )
 for experiment in "${screening_configs[@]}"; do
     run_experiment "${experiment}" "screen_${experiment}_75s" 75 || true

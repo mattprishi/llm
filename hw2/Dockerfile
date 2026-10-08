@@ -14,6 +14,7 @@ RUN python3 -m pip install --no-cache-dir --no-build-isolation \
 
 ENV HF_DISABLE_TELEMETRY=true \
     PYTHONUNBUFFERED=1 \
+    PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
     OMP_NUM_THREADS=1 \
     OPENBLAS_NUM_THREADS=1 \
     SERVICE_HOST=0.0.0.0 \
