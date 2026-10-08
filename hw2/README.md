@@ -6,6 +6,11 @@
 BF16, AdamW fused, learning rate, scheduler и seed из исходного шаблона.
 Меняются только разрешённые заданием механизмы оптимизации.
 
+Итог: baseline — 7 067 useful tokens/s; FlashAttention 2 + packing — 22 238
+tokens/s, `S=3.1465`. Полный разбор находится в [`report.md`](report.md), краткий
+текст для формы — в [`submission.md`](submission.md), итоговая метрика — в
+[`summary.json`](summary.json), все успешные запуски — в [`results/`](results/).
+
 ```bash
 docker build -t llm-hw2 .
 docker run --rm --gpus all --ipc=host \

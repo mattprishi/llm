@@ -1,0 +1,9 @@
+run_name,experiment,train_seconds,batch_size,gradient_accumulation,effective_batch_size,attention,packing,padding_free,checkpointing,compile,liger,activation_offloading,tokens_per_second,speedup_vs_baseline,peak_allocated_gib,peak_reserved_gib,validation_loss,optimizer_steps
+baseline_300s,baseline,300.2080162120001,32,2,64,sdpa,False,False,False,False,False,False,7067.364304197531,1.0,41.23698711395264,43.439453125,6.600632697123957,368
+final_1_fa2_packing_300s,fa2_packing,300.3058835770007,32,2,64,flash_attention_2,True,True,False,False,False,False,22237.632609205335,3.1465241711111034,40.173505783081055,76.201171875,6.674602781211422,208
+final_2_fa2_padding_free_300s,fa2_padding_free,300.2663966130003,32,2,64,flash_attention_2,False,True,False,False,False,False,18203.998616437417,2.575783252835217,15.175484657287598,25.787109375,5.153960645544499,951
+screen_batch16_accum4_75s,batch16_accum4,75.28924922000078,16,4,64,sdpa,False,False,False,False,False,False,8091.140281476549,1.1448596581714297,24.198598861694336,25.470703125,8.16299333591012,104
+screen_checkpointing_75s,checkpointing,75.33548124300069,32,2,64,sdpa,False,False,True,False,False,False,5986.575291738084,0.8470732558929314,17.39147138595581,23.970703125,8.329747665627787,77
+screen_fa2_packing_75s,fa2_packing,75.30825797100078,32,2,64,flash_attention_2,True,True,False,False,False,False,22562.40821897796,3.1924784471033183,40.150208473205566,76.201171875,8.312866849965511,52
+screen_fa2_padding_free_75s,fa2_padding_free,75.03200269100125,32,2,64,flash_attention_2,False,True,False,False,False,False,19325.048887006258,2.7344067823882376,15.10562515258789,21.240234375,7.230414251465296,251
+screen_flash_attention_2_75s,flash_attention_2,75.74162377299945,32,2,64,flash_attention_2,False,False,False,False,False,False,7671.930794219162,1.0855434167533375,39.17211294174194,41.599609375,8.197687568253313,99

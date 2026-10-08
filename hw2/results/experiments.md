@@ -1,0 +1,10 @@
+| run_name | experiment | train_seconds | batch_size | gradient_accumulation | effective_batch_size | attention | packing | padding_free | checkpointing | compile | liger | activation_offloading | tokens_per_second | speedup_vs_baseline | peak_allocated_gib | peak_reserved_gib | validation_loss | optimizer_steps |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| baseline_300s | baseline | 300.2080 | 32 | 2 | 64 | sdpa | no | no | no | no | no | no | 7067.3643 | 1.0000 | 41.2370 | 43.4395 | 6.6006 | 368 |
+| final_1_fa2_packing_300s | fa2_packing | 300.3059 | 32 | 2 | 64 | flash_attention_2 | yes | yes | no | no | no | no | 22237.6326 | 3.1465 | 40.1735 | 76.2012 | 6.6746 | 208 |
+| final_2_fa2_padding_free_300s | fa2_padding_free | 300.2664 | 32 | 2 | 64 | flash_attention_2 | no | yes | no | no | no | no | 18203.9986 | 2.5758 | 15.1755 | 25.7871 | 5.1540 | 951 |
+| screen_batch16_accum4_75s | batch16_accum4 | 75.2892 | 16 | 4 | 64 | sdpa | no | no | no | no | no | no | 8091.1403 | 1.1449 | 24.1986 | 25.4707 | 8.1630 | 104 |
+| screen_checkpointing_75s | checkpointing | 75.3355 | 32 | 2 | 64 | sdpa | no | no | yes | no | no | no | 5986.5753 | 0.8471 | 17.3915 | 23.9707 | 8.3297 | 77 |
+| screen_fa2_packing_75s | fa2_packing | 75.3083 | 32 | 2 | 64 | flash_attention_2 | yes | yes | no | no | no | no | 22562.4082 | 3.1925 | 40.1502 | 76.2012 | 8.3129 | 52 |
+| screen_fa2_padding_free_75s | fa2_padding_free | 75.0320 | 32 | 2 | 64 | flash_attention_2 | no | yes | no | no | no | no | 19325.0489 | 2.7344 | 15.1056 | 21.2402 | 7.2304 | 251 |
+| screen_flash_attention_2_75s | flash_attention_2 | 75.7416 | 32 | 2 | 64 | flash_attention_2 | no | no | no | no | no | no | 7671.9308 | 1.0855 | 39.1721 | 41.5996 | 8.1977 | 99 |
