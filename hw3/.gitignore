@@ -6,6 +6,6 @@ outputs/executed_partial.ipynb
 outputs/*.tmp
 *.log
 _depr/
-_docs/hw3_dialog.md
+_docs/
 outputs/tokenizer_for_training/
 outputs/train_distributed.generated.py
