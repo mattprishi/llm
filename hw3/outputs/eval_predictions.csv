@@ -1,0 +1,371 @@
+id,lang,output,tools_ok,args_ok,model
+en_01,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",True,True,base
+en_02,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""off""}}
+</tool_call>",True,True,base
+en_03,en,"Sure, I can help with that. Could you please tell me which room it is?",False,False,base
+en_04,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 19}}
+</tool_call>",True,True,base
+en_05,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""kitchen"", ""value"": 24}}
+</tool_call>",True,True,base
+en_06,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 22}}
+</tool_call>",True,True,base
+en_07,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""bedroom""}}
+</tool_call>",True,True,base
+en_08,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",False,False,base
+en_09,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""living_room""}}
+</tool_call>",True,True,base
+en_10,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""olive oil"", ""quantity"": 1}}
+</tool_call>",True,True,base
+en_11,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""lemon"", ""quantity"": 3}}
+</tool_call>",True,False,base
+en_12,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""eggs"", ""quantity"": 1}}
+</tool_call>",True,False,base
+en_13,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 12}}
+</tool_call>",True,False,base
+en_14,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 60, ""label"": ""Laundry""}}
+</tool_call>",True,False,base
+en_15,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 25}}
+</tool_call>",True,False,base
+en_16,en,Sure! I will turn off the kitchen light. Could you please specify which room you want to control?,False,False,base
+en_17,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""all"", ""state"": ""off""}}
+</tool_call>",True,False,base
+en_18,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>
+<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 23}}
+</tool_call>",True,True,base
+en_19,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""on""}}
+</tool_call>",True,True,base
+en_20,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""milk"", ""quantity"": 2}}
+</tool_call>
+<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""bread"", ""quantity"": 1}}
+</tool_call>",True,False,base
+en_21,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 10, ""label"": ""Tea""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",True,False,base
+en_22,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""kitchen""}}
+</tool_call>
+<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""bedroom""}}
+</tool_call>",True,True,base
+en_23,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 18}}
+</tool_call>
+<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 21}}
+</tool_call>",True,True,base
+en_24,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""off""}}
+</tool_call>
+<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 90, ""label"": ""popcorn""}}
+</tool_call>",True,True,base
+en_25,en,How can I help you today?,True,True,base
+en_26,en,"Sure! If you have any other questions or need further assistance, feel free to ask.",True,True,base
+en_27,en,"I can turn on or off lights in your room, set the temperature in your living room, read the current state of your rooms, add items to your shopping list, create a timer for a specific duration, and turn on or off lights in your kitchen. Please let me know what you need help with!",True,True,base
+en_28,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""garage"", ""state"": ""on""}}
+</tool_call>",False,False,base
+en_29,en,"<tool_call>
+{""name"": ""play_music"", ""arguments"": {""music"": ""jazz""}}
+</tool_call>",False,False,base
+en_30,en,I don't have real-time weather data available. Could you please check your local weather forecast using another service or app?,True,True,base
+en_31,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bathroom"", ""state"": ""on""}}
+</tool_call>",False,False,base
+en_32,en,Sure! How many minutes would you like to set the timer for?,True,True,base
+en_33,en,Which state do you want to set (on or off)?,False,False,base
+en_34,en,Sure! Let's set up the timer for the pasta. How long do you want it to run for?,False,False,base
+en_35,en,"The current state of the bedroom is that the light is off and the temperature is 21°C. If you want to make it two degrees warmer, I can turn the lights on and adjust the temperature accordingly. Would you like me to do that?",False,False,base
+en_36,en,The living room is currently at 20 degrees Celsius. Turning it down by 3 degrees will make it 17 degrees.,False,False,base
+en_37,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>",True,True,base
+en_38,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 22}}
+</tool_call>",True,True,base
+en_39,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""apples"", ""quantity"": 6}}
+</tool_call>",True,True,base
+en_40,en,"You're welcome! If you need any more information, feel free to ask.",True,True,base
+ru_01,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",True,True,base
+ru_02,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""sleeping_room"", ""state"": ""off""}}
+</tool_call>",True,False,base
+ru_03,ru,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""kitchen"", ""value"": 23}}
+</tool_call>",True,False,base
+ru_04,ru,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""kitchen"", ""value"": 19}}
+</tool_call>",True,True,base
+ru_05,ru,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""sleeping""}}
+</tool_call>",True,False,base
+ru_06,ru,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""молоко"", ""quantity"": 2}}
+</tool_call>",True,False,base
+ru_07,ru,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""Кофе"", ""quantity"": 2}}
+</tool_call>
+<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""Молоко"", ""quantity"": 1}}
+</tool_call>",True,False,base
+ru_08,ru,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 7, ""label"": ""Яйца""}}
+</tool_call>",True,False,base
+ru_09,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""all"", ""state"": ""off""}}
+</tool_call>",True,False,base
+ru_10,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""sleeping_room"", ""state"": ""on""}}
+</tool_call>",False,False,base
+ru_11,ru,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""хлеб, сыр"", ""quantity"": 2}}
+</tool_call>",True,False,base
+ru_12,ru,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""kitchen""}}
+</tool_call>
+<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""bedroom""}}
+</tool_call>
+<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""living_room""}}
+</tool_call>",True,False,base
+ru_13,ru,Конечно! Как я могу вам помочь сегодня?,True,True,base
+ru_14,ru,"Пожалуйста, рад был помочь! Если у вас есть еще вопросы, не стесняйтесь задавать.",True,True,base
+ru_15,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""garage"", ""state"": ""on""}}
+</tool_call>",False,False,base
+ru_16,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>",False,False,base
+ru_17,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>",False,False,base
+ru_18,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""gостинейка"", ""state"": ""on""}}
+</tool_call>",True,False,base
+ru_19,ru,Для спальни на два градуса теплее вы можете установить свет на `off` и установить комнату на `21` градусов по Цельсию.,False,False,base
+ru_20,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>",True,False,base
+en_01,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+en_02,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""off""}}
+</tool_call>",True,True,sft
+en_03,en,"I can't control the living room light. I can only handle the kitchen, bedroom and living room.",False,False,sft
+en_04,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 19}}
+</tool_call>",True,True,sft
+en_05,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""kitchen"", ""value"": 24}}
+</tool_call>",True,True,sft
+en_06,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 22}}
+</tool_call>",True,True,sft
+en_07,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""bedroom""}}
+</tool_call>",True,True,sft
+en_08,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""kitchen""}}
+</tool_call>",True,True,sft
+en_09,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""living_room""}}
+</tool_call>",True,True,sft
+en_10,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""olive oil""}}
+</tool_call>",True,True,sft
+en_11,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""lemons"", ""quantity"": 3}}
+</tool_call>",True,True,sft
+en_12,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""eggs"", ""quantity"": 12}}
+</tool_call>",True,True,sft
+en_13,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 12, ""label"": ""rice""}}
+</tool_call>",True,True,sft
+en_14,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 120, ""label"": ""laundry""}}
+</tool_call>",True,False,sft
+en_15,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 25, ""label"": ""workout""}}
+</tool_call>",True,True,sft
+en_16,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""off""}}
+</tool_call>",True,True,sft
+en_17,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""off""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""off""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""off""}}
+</tool_call>",True,True,sft
+en_18,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>
+<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 23}}
+</tool_call>",True,True,sft
+en_19,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+en_20,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""milk""}}
+</tool_call>
+<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""bread""}}
+</tool_call>",True,True,sft
+en_21,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 10, ""label"": ""tea""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+en_22,en,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""kitchen""}}
+</tool_call>
+<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""bedroom""}}
+</tool_call>",True,True,sft
+en_23,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 18}}
+</tool_call>
+<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 21}}
+</tool_call>",True,True,sft
+en_24,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""off""}}
+</tool_call>
+<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 90, ""label"": ""popcorn""}}
+</tool_call>",True,True,sft
+en_25,en,"Hi! I can control lights and temperature in three rooms: kitchen, bedroom and living room.",True,True,sft
+en_26,en,Have a great day!,True,True,sft
+en_27,en,"I can turn lights on or off, set and check the temperature in three rooms, add things to your shopping list and start timers.",True,True,sft
+en_28,en,"I can't control the garage. I can turn the lights on or off in the kitchen, bedroom or living room, set room temperatures, add items to your shopping list or start timers.",True,True,sft
+en_29,en,"I can't play music, unfortunately. I can control lights and temperature, manage your shopping list and set timers.",True,True,sft
+en_30,en,I don't have weather information. I can tell you the temperature in your rooms though.,True,True,sft
+en_31,en,"I can't control the bathroom light. I can only handle lights in the kitchen, bedroom and living room.",True,True,sft
+en_32,en,How many minutes should the timer run?,True,True,sft
+en_33,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+en_34,en,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 9, ""label"": ""pasta""}}
+</tool_call>",True,True,sft
+en_35,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 23}}
+</tool_call>",True,True,sft
+en_36,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 17}}
+</tool_call>",True,True,sft
+en_37,en,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+en_38,en,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 25}}
+</tool_call>",True,False,sft
+en_39,en,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""apples"", ""quantity"": 6}}
+</tool_call>",True,True,sft
+en_40,en,Have a great day!,True,True,sft
+ru_01,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+ru_02,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""off""}}
+</tool_call>",True,True,sft
+ru_03,ru,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""living_room"", ""value"": 23}}
+</tool_call>",True,True,sft
+ru_04,ru,Я могу ставить температуру только от 16 до 30 градусов. Какое значение поставить на кухне?,False,False,sft
+ru_05,ru,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""bedroom""}}
+</tool_call>",True,True,sft
+ru_06,ru,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""молоко""}}
+</tool_call>",True,True,sft
+ru_07,ru,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""кефир"", ""quantity"": 2}}
+</tool_call>",True,True,sft
+ru_08,ru,"<tool_call>
+{""name"": ""set_timer"", ""arguments"": {""minutes"": 7, ""label"": ""яйца""}}
+</tool_call>",True,True,sft
+ru_09,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""kitchen"", ""state"": ""off""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""off""}}
+</tool_call>
+<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""off""}}
+</tool_call>",True,True,sft
+ru_10,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""on""}}
+</tool_call>
+<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 21}}
+</tool_call>",True,True,sft
+ru_11,ru,"<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""хлеб""}}
+</tool_call>
+<tool_call>
+{""name"": ""add_to_shopping_list"", ""arguments"": {""item"": ""сыр""}}
+</tool_call>",True,True,sft
+ru_12,ru,"<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""living_room""}}
+</tool_call>
+<tool_call>
+{""name"": ""get_room_state"", ""arguments"": {""room"": ""kitchen""}}
+</tool_call>",True,True,sft
+ru_13,ru,"Привет! Могу помочь со светом, температурой, списком покупок и таймерами.",True,True,sft
+ru_14,ru,"Пожалуйста, хорошего дня!",True,True,sft
+ru_15,ru,"Гаражом я управлять не могу, но могу включить свет на кухне, в спальне и в гостиной.",True,True,sft
+ru_16,ru,"Телевизор мне недоступен, но свет в гостиной включить или выключить могу.",True,True,sft
+ru_17,ru,"Свет в ванной мне недоступен. Я управляю только кухней, спальней и гостиной.",True,True,sft
+ru_18,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""living_room"", ""state"": ""on""}}
+</tool_call>",True,True,sft
+ru_19,ru,"<tool_call>
+{""name"": ""set_temperature"", ""arguments"": {""room"": ""bedroom"", ""value"": 23}}
+</tool_call>",True,True,sft
+ru_20,ru,"<tool_call>
+{""name"": ""turn_light"", ""arguments"": {""room"": ""bedroom"", ""state"": ""on""}}
+</tool_call>",True,True,sft

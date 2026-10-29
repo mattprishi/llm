@@ -1,0 +1,11 @@
+.venv-hw3/
+__pycache__/
+.ipynb_checkpoints/
+outputs/full_sft/
+outputs/executed_partial.ipynb
+outputs/*.tmp
+*.log
+_depr/
+_docs/hw3_dialog.md
+outputs/tokenizer_for_training/
+outputs/train_distributed.generated.py

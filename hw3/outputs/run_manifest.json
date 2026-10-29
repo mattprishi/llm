@@ -1,0 +1,93 @@
+{
+  "started_at_utc": "2026-10-27T09:16:54.125197+00:00",
+  "hostname": "edu-03",
+  "seed": 42,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "python": "3.12.3",
+  "cuda_runtime": "12.6",
+  "packages": {
+    "torch": "2.8.0+cu126",
+    "transformers": "4.56.1",
+    "trl": "0.23.1",
+    "datasets": "3.6.0",
+    "accelerate": "1.6.0"
+  },
+  "gpus": [
+    "NVIDIA A100-SXM4-80GB",
+    "NVIDIA A100-SXM4-80GB"
+  ],
+  "data_sha256": {
+    "test_cases.jsonl": "778e161d6d79b1064eacbe4a25c0e51b39c19128892fcb6dbea2573932c78b0c",
+    "train.jsonl": "3ce307895527fe614c8738c32bb67d03a9559ae8e76bed8d854999f15d253d33",
+    "validation.jsonl": "57ffc6406375f6bbf20b21dac0d8d82a1ca30160ddb4d81ffe24a69e876ef1d8"
+  },
+  "test_context_overlap": [
+    {
+      "split": "train",
+      "test_id": "en_17",
+      "source_ids": [
+        "train_0257"
+      ]
+    },
+    {
+      "split": "train",
+      "test_id": "en_22",
+      "source_ids": [
+        "train_0821"
+      ]
+    },
+    {
+      "split": "train",
+      "test_id": "ru_13",
+      "source_ids": [
+        "train_0310"
+      ]
+    },
+    {
+      "split": "validation",
+      "test_id": "en_27",
+      "source_ids": [
+        "validation_0078"
+      ]
+    }
+  ],
+  "trainable_parameters": 494032768,
+  "training_seconds": 61.32366612495389,
+  "training_metrics": {
+    "train_runtime": 61.1682,
+    "train_samples_per_second": 40.756,
+    "train_steps_per_second": 5.101,
+    "total_flos": 4818671453077504.0,
+    "train_loss": 0.17064142867158621,
+    "epoch": 3.0
+  },
+  "peak_allocated_gib": [
+    19.66821813583374,
+    19.76108694076538
+  ],
+  "config": {
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "global_batch_size": 8,
+    "assistant_only_loss": true,
+    "max_length": 2048,
+    "parallelism": "DistributedDataParallel"
+  },
+  "finished_at_utc": "2026-10-27T09:19:32.673451+00:00",
+  "overall_metrics": [
+    {
+      "model": "base",
+      "n": 60,
+      "tool_set_accuracy": 0.75,
+      "exact_match": 0.43333333333333335
+    },
+    {
+      "model": "sft",
+      "n": 60,
+      "tool_set_accuracy": 0.9666666666666667,
+      "exact_match": 0.9333333333333333
+    }
+  ],
+  "agent_goal_passes": 5
+}
