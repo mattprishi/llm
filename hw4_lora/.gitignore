@@ -1,0 +1,13 @@
+.venv/
+data/
+runs/
+pilot/
+__pycache__/
+hw4-results.tar.gz
+hw4-results-3000.tar.gz
+scale3000/
+hw4-results-banking77.tar.gz
+banking77/
+
+/_deprecated/reproduction/
+/run-*.log
