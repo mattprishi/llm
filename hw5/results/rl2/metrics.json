@@ -1,0 +1,65 @@
+{
+  "overall": 0.6253333333333333,
+  "groups": {
+    "simple": 0.56,
+    "multiple": 0.6866666666666666,
+    "parallel": 0.48,
+    "parallel_multiple": 0.58,
+    "irrelevance": 0.8200000000000001
+  },
+  "categories": {
+    "simple": {
+      "correct": 28,
+      "total": 50,
+      "accuracy": 0.56
+    },
+    "multiple": {
+      "correct": 50,
+      "total": 75,
+      "accuracy": 0.6666666666666666
+    },
+    "live_multiple": {
+      "correct": 53,
+      "total": 75,
+      "accuracy": 0.7066666666666667
+    },
+    "parallel": {
+      "correct": 24,
+      "total": 50,
+      "accuracy": 0.48
+    },
+    "parallel_multiple": {
+      "correct": 29,
+      "total": 50,
+      "accuracy": 0.58
+    },
+    "irrelevance": {
+      "correct": 21,
+      "total": 25,
+      "accuracy": 0.84
+    },
+    "live_irrelevance": {
+      "correct": 20,
+      "total": 25,
+      "accuracy": 0.8
+    }
+  },
+  "model": "checkpoints/rl2",
+  "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "benchmark_sha256": "b257ffe2c539897123706ed2211f9ad0e68b8f8fbad7b523ba5a3fcca2a457b2",
+  "decoding": {
+    "temperature": 0,
+    "max_new_tokens": 1024,
+    "enable_thinking": false,
+    "seed": 42
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "vllm": "0.22.0+cu129",
+    "transformers": "5.9.0",
+    "torch": "2.11.0+cu129",
+    "trl": "1.16.0",
+    "bfcl-eval": "2026.3.23"
+  },
+  "elapsed_seconds": 74.4
+}

@@ -1,0 +1,84 @@
+{
+  "dataset": "Team-ACE/ToolACE",
+  "revision": "6bda777c88d21e5a204703c1ee45597a8fa4f734",
+  "source_sha256": "ba12c083fca7e8da48c67ad5b895e495447da7c66e39a2e19742c082e6cb537e",
+  "tokenizer": "Qwen/Qwen3.5-2B",
+  "tokenizer_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "seed": 42,
+  "source_dialogues": 11300,
+  "unique_first_user_groups": 11165,
+  "reserved_validation_groups": 1116,
+  "max_prompt_tokens": 1536,
+  "prompt_tokens_before_length_filter": {
+    "min": 272,
+    "p50": 706,
+    "p95": 1388,
+    "max": 4090
+  },
+  "filter_counts": {
+    "post_tool_text_excluded": 1034,
+    "long_prompt": 359,
+    "empty_or_unsupported_turn": 5,
+    "unsupported_schema_header": 748,
+    "duplicate_prompt": 36,
+    "invalid_tool_schema": 1
+  },
+  "splits": {
+    "train": {
+      "rows": 10474,
+      "dialogues": 9409,
+      "kinds": {
+        "single_call": 5106,
+        "multi_call": 3653,
+        "no_call": 1715
+      },
+      "prompt_tokens": {
+        "min": 272,
+        "p50": 694,
+        "p95": 1268,
+        "max": 1536
+      },
+      "source_answer_tokens": {
+        "min": 2,
+        "p50": 37,
+        "p95": 198,
+        "max": 1174
+      },
+      "available_tools": {
+        "min": 1,
+        "p50": 3,
+        "p95": 6,
+        "max": 9
+      },
+      "history_with_tool_response": 1006
+    },
+    "val": {
+      "rows": 128,
+      "dialogues": 126,
+      "kinds": {
+        "no_call": 43,
+        "single_call": 43,
+        "multi_call": 42
+      },
+      "prompt_tokens": {
+        "min": 279,
+        "p50": 653,
+        "p95": 1356,
+        "max": 1448
+      },
+      "source_answer_tokens": {
+        "min": 5,
+        "p50": 47,
+        "p95": 262,
+        "max": 542
+      },
+      "available_tools": {
+        "min": 1,
+        "p50": 3,
+        "p95": 6,
+        "max": 7
+      },
+      "history_with_tool_response": 21
+    }
+  }
+}

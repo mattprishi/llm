@@ -1,0 +1,28 @@
+{
+  "toolace_dialogues": 11300,
+  "prepared_train_rows": 10474,
+  "prepared_validation_rows": 128,
+  "references_with_exact_qwen_render_and_reward_one": 10602,
+  "cross_split_dialogue_or_prompt_overlap": 0,
+  "exact_normalized_last_user_text_overlap_with_bfcl": {
+    "train": 0,
+    "val": 0
+  },
+  "bfcl_prompt_token_range": [300, 2520],
+  "bfcl_prompt_count": 350,
+  "reward_unit_tests": 4,
+  "cpu_integration": {
+    "description": "Tiny randomly initialized Qwen3.5 with controlled completions, not a quality measurement.",
+    "trl": "1.16.0",
+    "transformers": "5.9.0",
+    "peft": "0.18.1",
+    "variants": ["rl1", "rl2", "rl3"],
+    "nonzero_gradient_steps_per_variant": 2,
+    "lora_merge_and_hf_reload": "passed"
+  },
+  "unchanged_inputs_sha256": {
+    "evaluate.py": "62411a6f1bd790bd54f27fb09e567075b5b27510d126ebe145e72b8319abc7b6",
+    "bfcl.jsonl": "b257ffe2c539897123706ed2211f9ad0e68b8f8fbad7b523ba5a3fcca2a457b2",
+    "Dockerfile": "d96b2164a9165964594cb3030afbdb6dee9f3b43ee644c460f0aad4867762421"
+  }
+}

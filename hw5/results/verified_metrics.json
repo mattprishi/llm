@@ -1,0 +1,350 @@
+{
+  "validated": {
+    "base": {
+      "model": "Qwen/Qwen3.5-2B",
+      "overall": 0.6960000000000001,
+      "groups": {
+        "simple": 0.68,
+        "multiple": 0.8,
+        "parallel": 0.58,
+        "parallel_multiple": 0.8,
+        "irrelevance": 0.6200000000000001
+      },
+      "categories": {
+        "simple": {
+          "correct": 34,
+          "total": 50,
+          "accuracy": 0.68
+        },
+        "multiple": {
+          "correct": 62,
+          "total": 75,
+          "accuracy": 0.8266666666666667
+        },
+        "live_multiple": {
+          "correct": 58,
+          "total": 75,
+          "accuracy": 0.7733333333333333
+        },
+        "parallel": {
+          "correct": 29,
+          "total": 50,
+          "accuracy": 0.58
+        },
+        "parallel_multiple": {
+          "correct": 40,
+          "total": 50,
+          "accuracy": 0.8
+        },
+        "irrelevance": {
+          "correct": 17,
+          "total": 25,
+          "accuracy": 0.68
+        },
+        "live_irrelevance": {
+          "correct": 14,
+          "total": 25,
+          "accuracy": 0.56
+        }
+      },
+      "errors": {
+        "no_parsed_call": 32,
+        "other_checker_error": 43,
+        "truncated": 5,
+        "unnecessary_call": 16
+      },
+      "with_parsed_call": {
+        "call_required": 266,
+        "irrelevance": 17
+      },
+      "micro_correct": 254,
+      "elapsed_seconds": 85.9,
+      "versions": {
+        "numpy": "2.2.6",
+        "vllm": "0.22.0+cu129",
+        "transformers": "5.9.0",
+        "torch": "2.11.0+cu129",
+        "trl": "1.16.0",
+        "bfcl-eval": "2026.3.23"
+      },
+      "prompt_lengths_sha256": "09aa5fd958777c1a0eb2431eb44d7bbfc20761a7e31f0628bd3817960c17fcf5"
+    },
+    "rl1": {
+      "model": "checkpoints/rl1",
+      "overall": 0.736,
+      "groups": {
+        "simple": 0.78,
+        "multiple": 0.8400000000000001,
+        "parallel": 0.74,
+        "parallel_multiple": 0.82,
+        "irrelevance": 0.5
+      },
+      "categories": {
+        "simple": {
+          "correct": 39,
+          "total": 50,
+          "accuracy": 0.78
+        },
+        "multiple": {
+          "correct": 66,
+          "total": 75,
+          "accuracy": 0.88
+        },
+        "live_multiple": {
+          "correct": 60,
+          "total": 75,
+          "accuracy": 0.8
+        },
+        "parallel": {
+          "correct": 37,
+          "total": 50,
+          "accuracy": 0.74
+        },
+        "parallel_multiple": {
+          "correct": 41,
+          "total": 50,
+          "accuracy": 0.82
+        },
+        "irrelevance": {
+          "correct": 13,
+          "total": 25,
+          "accuracy": 0.52
+        },
+        "live_irrelevance": {
+          "correct": 12,
+          "total": 25,
+          "accuracy": 0.48
+        }
+      },
+      "errors": {
+        "no_parsed_call": 11,
+        "other_checker_error": 45,
+        "truncated": 3,
+        "unnecessary_call": 23
+      },
+      "with_parsed_call": {
+        "call_required": 288,
+        "irrelevance": 24
+      },
+      "micro_correct": 268,
+      "elapsed_seconds": 69.8,
+      "versions": {
+        "numpy": "2.2.6",
+        "vllm": "0.22.0+cu129",
+        "transformers": "5.9.0",
+        "torch": "2.11.0+cu129",
+        "trl": "1.16.0",
+        "bfcl-eval": "2026.3.23"
+      },
+      "prompt_lengths_sha256": "09aa5fd958777c1a0eb2431eb44d7bbfc20761a7e31f0628bd3817960c17fcf5",
+      "paired_vs_base": {
+        "simple": {
+          "improved": 5,
+          "regressed": 0
+        },
+        "multiple": {
+          "improved": 6,
+          "regressed": 0
+        },
+        "parallel": {
+          "improved": 8,
+          "regressed": 0
+        },
+        "parallel_multiple": {
+          "improved": 1,
+          "regressed": 0
+        },
+        "irrelevance": {
+          "improved": 1,
+          "regressed": 7
+        }
+      },
+      "delta_pp": 3.9999999999999925
+    },
+    "rl2": {
+      "model": "checkpoints/rl2",
+      "overall": 0.6253333333333333,
+      "groups": {
+        "simple": 0.56,
+        "multiple": 0.6866666666666666,
+        "parallel": 0.48,
+        "parallel_multiple": 0.58,
+        "irrelevance": 0.8200000000000001
+      },
+      "categories": {
+        "simple": {
+          "correct": 28,
+          "total": 50,
+          "accuracy": 0.56
+        },
+        "multiple": {
+          "correct": 50,
+          "total": 75,
+          "accuracy": 0.6666666666666666
+        },
+        "live_multiple": {
+          "correct": 53,
+          "total": 75,
+          "accuracy": 0.7066666666666667
+        },
+        "parallel": {
+          "correct": 24,
+          "total": 50,
+          "accuracy": 0.48
+        },
+        "parallel_multiple": {
+          "correct": 29,
+          "total": 50,
+          "accuracy": 0.58
+        },
+        "irrelevance": {
+          "correct": 21,
+          "total": 25,
+          "accuracy": 0.84
+        },
+        "live_irrelevance": {
+          "correct": 20,
+          "total": 25,
+          "accuracy": 0.8
+        }
+      },
+      "errors": {
+        "no_parsed_call": 63,
+        "other_checker_error": 50,
+        "truncated": 5,
+        "unnecessary_call": 7
+      },
+      "with_parsed_call": {
+        "call_required": 234,
+        "irrelevance": 8
+      },
+      "micro_correct": 225,
+      "elapsed_seconds": 74.4,
+      "versions": {
+        "numpy": "2.2.6",
+        "vllm": "0.22.0+cu129",
+        "transformers": "5.9.0",
+        "torch": "2.11.0+cu129",
+        "trl": "1.16.0",
+        "bfcl-eval": "2026.3.23"
+      },
+      "prompt_lengths_sha256": "09aa5fd958777c1a0eb2431eb44d7bbfc20761a7e31f0628bd3817960c17fcf5",
+      "paired_vs_base": {
+        "simple": {
+          "improved": 0,
+          "regressed": 6
+        },
+        "multiple": {
+          "improved": 2,
+          "regressed": 19
+        },
+        "parallel": {
+          "improved": 0,
+          "regressed": 5
+        },
+        "parallel_multiple": {
+          "improved": 1,
+          "regressed": 12
+        },
+        "irrelevance": {
+          "improved": 10,
+          "regressed": 0
+        }
+      },
+      "delta_pp": -7.066666666666677
+    },
+    "rl3": {
+      "model": "checkpoints/rl3",
+      "overall": 0.6933333333333334,
+      "groups": {
+        "simple": 0.72,
+        "multiple": 0.7866666666666666,
+        "parallel": 0.56,
+        "parallel_multiple": 0.72,
+        "irrelevance": 0.68
+      },
+      "categories": {
+        "simple": {
+          "correct": 36,
+          "total": 50,
+          "accuracy": 0.72
+        },
+        "multiple": {
+          "correct": 62,
+          "total": 75,
+          "accuracy": 0.8266666666666667
+        },
+        "live_multiple": {
+          "correct": 56,
+          "total": 75,
+          "accuracy": 0.7466666666666667
+        },
+        "parallel": {
+          "correct": 28,
+          "total": 50,
+          "accuracy": 0.56
+        },
+        "parallel_multiple": {
+          "correct": 36,
+          "total": 50,
+          "accuracy": 0.72
+        },
+        "irrelevance": {
+          "correct": 17,
+          "total": 25,
+          "accuracy": 0.68
+        },
+        "live_irrelevance": {
+          "correct": 17,
+          "total": 25,
+          "accuracy": 0.68
+        }
+      },
+      "errors": {
+        "no_parsed_call": 30,
+        "other_checker_error": 49,
+        "truncated": 8,
+        "unnecessary_call": 11
+      },
+      "with_parsed_call": {
+        "call_required": 267,
+        "irrelevance": 12
+      },
+      "micro_correct": 252,
+      "elapsed_seconds": 74.4,
+      "versions": {
+        "numpy": "2.2.6",
+        "vllm": "0.22.0+cu129",
+        "transformers": "5.9.0",
+        "torch": "2.11.0+cu129",
+        "trl": "1.16.0",
+        "bfcl-eval": "2026.3.23"
+      },
+      "prompt_lengths_sha256": "09aa5fd958777c1a0eb2431eb44d7bbfc20761a7e31f0628bd3817960c17fcf5",
+      "paired_vs_base": {
+        "simple": {
+          "improved": 3,
+          "regressed": 1
+        },
+        "multiple": {
+          "improved": 3,
+          "regressed": 5
+        },
+        "parallel": {
+          "improved": 0,
+          "regressed": 1
+        },
+        "parallel_multiple": {
+          "improved": 0,
+          "regressed": 4
+        },
+        "irrelevance": {
+          "improved": 5,
+          "regressed": 2
+        }
+      },
+      "delta_pp": -0.2666666666666706
+    }
+  },
+  "unavailable": {}
+}

@@ -1,0 +1,37 @@
+{
+  "best": {
+    "step": 6,
+    "strict": 0.5,
+    "shaped": 0.5984375,
+    "n": 12,
+    "seconds": 14.683424679096788
+  },
+  "validation": [
+    {
+      "step": 6,
+      "strict": 0.5,
+      "shaped": 0.5984375,
+      "n": 12,
+      "seconds": 14.683424679096788
+    }
+  ],
+  "train": {
+    "train_runtime": 59.7304,
+    "train_samples_per_second": 0.402,
+    "train_steps_per_second": 0.1,
+    "train_loss": -7.450580596923828e-09,
+    "epoch": 0.0005728470498376934
+  },
+  "nonzero_grad_steps": 2,
+  "step_seconds": [
+    11.164587794803083,
+    8.901526898145676,
+    9.015375550836325,
+    7.694421877618879,
+    2.8855207301676273,
+    5.314240605104715
+  ],
+  "steady_median_step_seconds": 7.694421877618879,
+  "peak_allocated_gib": 35.77029037475586,
+  "elapsed_seconds": 64.89531814586371
+}
