@@ -1,0 +1,39 @@
+{
+  "reference_mean_ms": 6571.941892733334,
+  "reference_mean_output_tokens": 422.875,
+  "compared_profile_positions": "21\u2013140",
+  "candidates": [
+    {
+      "config": "tokens4096fi",
+      "spec": "off",
+      "run_id": "screen-tokens4096fi-off",
+      "mean_latency_ms": 6148.398307158333,
+      "mean_output_tokens": 429.03333333333336
+    }
+  ],
+  "promoted": true,
+  "full_run": {
+    "run_id": "tune-extra-tokens4096fi-off-1",
+    "mode": "benchmark",
+    "rpm": 120,
+    "config": "tokens4096fi",
+    "spec": "off",
+    "duration_s": 0,
+    "expected_requests": 640,
+    "data_sha256": "67c48379e5ae2608f7ca08650fd346facdc01f766a3e8eecea6459d7cec00ebc",
+    "sent": 640,
+    "successful": 640,
+    "errors": 0,
+    "send_span_s": 319.500278309,
+    "offered_rpm": 119.99989547088917,
+    "request_throughput_rps": 1.9619595911821095,
+    "mean_e2e_s": 6.216306243504687,
+    "p90_e2e_s": 8.3726776053,
+    "mean_ttft_s": 0.1088754835671875,
+    "mean_itl_s": 0.014449485328313338,
+    "mean_output_tokens": 420.678125,
+    "p90_output_tokens": 512.0,
+    "mean_input_tokens": 1030.0828125,
+    "status": "ok"
+  }
+}

@@ -1,0 +1,8 @@
+/_setup/
+/results/
+/logs/
+/hf-cache/
+/data/requests.jsonl
+/.homework-cache/
+/__pycache__/
+.DS_Store

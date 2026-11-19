@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!serve.sh
+!profile.sh
+!benchmark.sh
+!load_test.sh
