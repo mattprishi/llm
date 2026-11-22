@@ -1,0 +1,43 @@
+{
+  "notebook_sha256": "787d4cb7ac37e70291dc988d1c542ce7a2f916d52de757135754dcffdaca2e50",
+  "baseline": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "teacher": {
+    "id": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+  },
+  "massive": {
+    "id": "AmazonScience/massive",
+    "revision": "ed58ac423a2f4121720918bf5301577edce4ffd3",
+    "locale": "ru-RU"
+  },
+  "wikitext": {
+    "id": "Salesforce/wikitext",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "config": "wikitext-2-v1"
+  },
+  "hardware": [
+    "0, NVIDIA A100-SXM4-80GB, 81920 MiB, 570.86.15",
+    "1, NVIDIA A100-SXM4-80GB, 81920 MiB, 570.86.15"
+  ],
+  "cuda_runtime": "12.6",
+  "dev_samples": 256,
+  "seed": 42,
+  "generation": {
+    "mode_verified": "greedy_search",
+    "max_new_tokens": 128,
+    "batch_size": 8
+  },
+  "quantized_loading": {
+    "W4A16": {
+      "run_compressed": false
+    },
+    "W8A8": {
+      "run_compressed": true,
+      "dynamic_int8_activations_verified": true
+    }
+  },
+  "checkpoints_location": "edu@82.202.141.176:~/codex_hw7_llm_20261122/artifacts_compression_hw/"
+}

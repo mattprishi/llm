@@ -1,0 +1,46 @@
+2026-11-22T16:07:27+00:00 START imports
+2026-11-22T16:07:30+00:00 FINISH imports 3.65s
+2026-11-22T16:07:30+00:00 START config
+{'torch': '2.8.0+cu126', 'transformers': '4.55.2', 'datasets': '4.1.1', 'llmcompressor': '0.8.1', 'compressed-tensors': '0.12.2', 'numpy': '2.2.6', 'safetensors': '0.8.0'}
+2026-11-22T16:07:30+00:00 FINISH config 0.01s
+2026-11-22T16:07:30+00:00 START load-dataset
+DatasetDict({
+    train: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 11514
+    })
+    validation: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2033
+    })
+    test: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2974
+    })
+})
+2026-11-22T16:07:34+00:00 FINISH load-dataset 4.33s
+2026-11-22T16:07:34+00:00 START parse-gold
+2026-11-22T16:07:34+00:00 FINISH parse-gold 0.00s
+2026-11-22T16:07:34+00:00 START cfb89075
+Map:   0%|          | 0/11514 [00:00<?, ? examples/s]Map:  11%|█▏        | 1305/11514 [00:00<00:00, 12736.24 examples/s]Map:  23%|██▎       | 2671/11514 [00:00<00:00, 13270.88 examples/s]Map:  35%|███▌      | 4046/11514 [00:00<00:00, 13483.33 examples/s]Map:  47%|████▋     | 5417/11514 [00:00<00:00, 13567.89 examples/s]Map:  64%|██████▍   | 7353/11514 [00:00<00:00, 13261.44 examples/s]Map:  76%|███████▌  | 8737/11514 [00:00<00:00, 13434.17 examples/s]Map:  88%|████████▊ | 10131/11514 [00:00<00:00, 13584.13 examples/s]Map: 100%|██████████| 11514/11514 [00:00<00:00, 13386.41 examples/s]Map: 100%|██████████| 11514/11514 [00:00<00:00, 13355.23 examples/s]
+Map:   0%|          | 0/2033 [00:00<?, ? examples/s]Map:  64%|██████▍   | 1311/2033 [00:00<00:00, 12830.33 examples/s]Map: 100%|██████████| 2033/2033 [00:00<00:00, 12934.46 examples/s]
+Map:   0%|          | 0/2974 [00:00<?, ? examples/s]Map:  47%|████▋     | 1389/2974 [00:00<00:00, 13639.52 examples/s]Map:  94%|█████████▍| 2793/2974 [00:00<00:00, 13868.57 examples/s]Map: 100%|██████████| 2974/2974 [00:00<00:00, 13657.35 examples/s]
+Число классов: 60 типов slots: 54
+2026-11-22T16:07:37+00:00 FINISH cfb89075 2.05s
+2026-11-22T16:07:37+00:00 START model-config
+Device: cuda:0
+2026-11-22T16:07:39+00:00 FINISH model-config 2.48s
+2026-11-22T16:07:39+00:00 START model-functions
+2026-11-22T16:07:39+00:00 FINISH model-functions 0.00s
+2026-11-22T16:07:39+00:00 START metrics
+2026-11-22T16:07:39+00:00 FINISH metrics 0.00s
+GPU: NVIDIA A100-SXM4-80GB
+2026-11-22T16:07:40+00:00 START b2ad65a4
+2026-11-22T16:07:41+00:00 FINISH b2ad65a4 1.37s
+2026-11-22T16:07:41+00:00 START 6c3b2c0d
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:13,  1.20it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:12,  1.16it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:02<00:11,  1.23it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:03<00:10,  1.19it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:04<00:10,  1.18it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:05<00:09,  1.19it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:05<00:08,  1.20it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:06<00:07,  1.18it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:07<00:06,  1.18it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:08<00:05,  1.18it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:09<00:05,  1.17it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:10<00:04,  1.18it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:10<00:03,  1.18it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:11<00:02,  1.19it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:12<00:01,  1.17it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:13<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:14<00:00,  1.25it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:14<00:00,  1.20it/s]
+2026-11-22T16:07:56+00:00 FINISH 6c3b2c0d 15.09s
+2026-11-22T16:07:56+00:00 START e96d949e
+Dev:   0%|          | 0/4 [00:00<?, ?it/s]`generation_config` default values have been modified to match model-specific defaults: {'do_sample': True, 'temperature': 0.6, 'top_k': 20, 'top_p': 0.95, 'bos_token_id': 151643}. If this is not desired, please set these values explicitly.
+Dev:  25%|██▌       | 1/4 [00:04<00:14,  4.77s/it]Dev:  50%|█████     | 2/4 [00:08<00:08,  4.16s/it]Dev:  75%|███████▌  | 3/4 [00:12<00:04,  4.05s/it]Dev: 100%|██████████| 4/4 [00:16<00:00,  4.20s/it]Dev: 100%|██████████| 4/4 [00:16<00:00,  4.21s/it]
+2026-11-22T16:08:13+00:00 FINISH e96d949e 16.87s

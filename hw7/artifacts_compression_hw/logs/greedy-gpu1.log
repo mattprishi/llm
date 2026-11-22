@@ -1,0 +1,43 @@
+2026-11-22T16:14:41+00:00 START imports
+2026-11-22T16:14:41+00:00 FINISH imports 0.88s
+2026-11-22T16:14:41+00:00 START config
+{'torch': '2.8.0+cu126', 'transformers': '4.55.2', 'datasets': '4.1.1', 'llmcompressor': '0.8.1', 'compressed-tensors': '0.12.2', 'numpy': '2.2.6', 'safetensors': '0.8.0'}
+2026-11-22T16:14:42+00:00 FINISH config 0.01s
+2026-11-22T16:14:42+00:00 START load-dataset
+DatasetDict({
+    train: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 11514
+    })
+    validation: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2033
+    })
+    test: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2974
+    })
+})
+2026-11-22T16:14:43+00:00 FINISH load-dataset 1.30s
+2026-11-22T16:14:43+00:00 START parse-gold
+2026-11-22T16:14:43+00:00 FINISH parse-gold 0.00s
+2026-11-22T16:14:43+00:00 START cfb89075
+Число классов: 60 типов slots: 54
+2026-11-22T16:14:44+00:00 FINISH cfb89075 0.79s
+2026-11-22T16:14:44+00:00 START model-config
+Device: cuda:0
+2026-11-22T16:14:46+00:00 FINISH model-config 2.46s
+2026-11-22T16:14:46+00:00 START model-functions
+2026-11-22T16:14:46+00:00 FINISH model-functions 0.00s
+2026-11-22T16:14:46+00:00 START metrics
+2026-11-22T16:14:46+00:00 FINISH metrics 0.00s
+GPU: NVIDIA A100-SXM4-80GB
+2026-11-22T16:14:47+00:00 START b2ad65a4
+2026-11-22T16:14:48+00:00 FINISH b2ad65a4 0.91s
+2026-11-22T16:14:48+00:00 START 6c3b2c0d
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:12,  1.25it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:12,  1.21it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:02<00:10,  1.28it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:03<00:10,  1.23it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:04<00:09,  1.22it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:04<00:09,  1.21it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:05<00:08,  1.24it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:06<00:07,  1.26it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:07<00:06,  1.26it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:08<00:05,  1.26it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:08<00:04,  1.23it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:09<00:04,  1.23it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:10<00:03,  1.23it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:11<00:02,  1.24it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:12<00:01,  1.21it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:12<00:00,  1.24it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:13<00:00,  1.28it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:13<00:00,  1.24it/s]
+2026-11-22T16:15:02+00:00 FINISH 6c3b2c0d 14.61s
+2026-11-22T16:15:02+00:00 START e96d949e
+Dev:   0%|          | 0/1 [00:00<?, ?it/s]Dev: 100%|██████████| 1/1 [00:04<00:00,  4.65s/it]Dev: 100%|██████████| 1/1 [00:04<00:00,  4.65s/it]
+2026-11-22T16:15:07+00:00 FINISH e96d949e 4.66s
+Verified modes: ['greedy_search']

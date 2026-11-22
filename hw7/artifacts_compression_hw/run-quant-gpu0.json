@@ -1,0 +1,67 @@
+{
+  "stage": "quant",
+  "started_at": "2026-11-22T16:15:15+00:00",
+  "status": "failed",
+  "cells": [
+    {
+      "id": "imports",
+      "elapsed_seconds": 3.49
+    },
+    {
+      "id": "config",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "id": "load-dataset",
+      "elapsed_seconds": 1.56
+    },
+    {
+      "id": "parse-gold",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "cfb89075",
+      "elapsed_seconds": 0.78
+    },
+    {
+      "id": "model-config",
+      "elapsed_seconds": 0.99
+    },
+    {
+      "id": "model-functions",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "metrics",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "evaluate-baseline",
+      "elapsed_seconds": 51.74
+    },
+    {
+      "id": "a8d5351b",
+      "elapsed_seconds": 4.48
+    },
+    {
+      "id": "a8d5351b",
+      "elapsed_seconds": 1380.1
+    },
+    {
+      "id": "a8d5351b",
+      "elapsed_seconds": 1367.25
+    },
+    {
+      "id": "a8d5351b",
+      "elapsed_seconds": 1114.75
+    }
+  ],
+  "elapsed_seconds": 3933.93,
+  "active_cell": "a8d5351b",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "peak_allocated_gib": 16.722,
+  "peak_reserved_gib": 17.398,
+  "active_configuration": "sq_05_massive",
+  "finished_at": "2026-11-22T17:20:49+00:00",
+  "error": "KeyboardInterrupt: "
+}

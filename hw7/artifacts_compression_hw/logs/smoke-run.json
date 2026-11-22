@@ -1,0 +1,65 @@
+{
+  "stage": "smoke",
+  "started_at": "2026-11-22T16:10:42+00:00",
+  "status": "completed",
+  "cells": [
+    {
+      "id": "imports",
+      "elapsed_seconds": 3.86
+    },
+    {
+      "id": "config",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "id": "load-dataset",
+      "elapsed_seconds": 1.42
+    },
+    {
+      "id": "parse-gold",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "cfb89075",
+      "elapsed_seconds": 0.79
+    },
+    {
+      "id": "model-config",
+      "elapsed_seconds": 2.91
+    },
+    {
+      "id": "model-functions",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "metrics",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "a8d5351b",
+      "elapsed_seconds": 4.35
+    },
+    {
+      "id": "a8d5351b",
+      "elapsed_seconds": 75.16
+    },
+    {
+      "id": "b0fa8cc9",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "73d6086d",
+      "elapsed_seconds": 3.9
+    }
+  ],
+  "elapsed_seconds": 97.52,
+  "active_cell": null,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "peak_allocated_gib": 40.012,
+  "peak_reserved_gib": 43.869,
+  "active_configuration": null,
+  "smoke_optimizer_step_seconds": 2.5,
+  "smoke_loss": 0.616932213306427,
+  "smoke_parameters_changed": true,
+  "finished_at": "2026-11-22T16:12:20+00:00"
+}

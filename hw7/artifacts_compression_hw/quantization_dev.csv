@@ -1,0 +1,7 @@
+run,path,method,calibration,quality,intent_accuracy,slot_micro_f1,frame_exact_match,valid_json_rate,n,weights_gib,scheme,alpha,calibration_n,calibration_tokens
+baseline,/dev/shm/codex_hw7_llm_20261122/baseline,dense,,0.28351873536299765,0.375,0.1920374707259953,0.10546875,0.5234375,256,15.256476424634457,,,,
+gptq_massive,/home/edu/codex_hw7_llm_20261122/artifacts_compression_hw/gptq_massive,GPTQ,massive,0.2214645127118644,0.2734375,0.1694915254237288,0.0859375,0.4140625,256,5.65448234975338,W4A16,,128.0,64474.0
+gptq_wikitext,/home/edu/codex_hw7_llm_20261122/artifacts_compression_hw/gptq_wikitext,GPTQ,wikitext,0.162109375,0.19921875,0.125,0.06640625,0.296875,256,5.65448234975338,W4A16,,128.0,75987.0
+awq_massive,/home/edu/codex_hw7_llm_20261122/artifacts_compression_hw/awq_massive,AWQ,massive,0.32428835822851154,0.41796875,0.23060796645702306,0.1015625,0.58984375,256,5.65448234975338,W4A16,,128.0,64474.0
+sq_05_massive,/home/edu/codex_hw7_llm_20261122/artifacts_compression_hw/sq_05_massive,SmoothQuant+GPTQ,massive,0.3889273470464135,0.5078125,0.270042194092827,0.1484375,0.6640625,256,8.790363281965256,W8A8,0.5,128.0,64474.0
+sq_08_massive,/home/edu/codex_hw7_llm_20261122/artifacts_compression_hw/sq_08_massive,SmoothQuant+GPTQ,massive,0.2552542506297229,0.359375,0.1511335012594458,0.10546875,0.48046875,256,8.790363281965256,W8A8,0.8,128.0,64474.0

@@ -1,0 +1,20 @@
+default_stage:
+  default_modifiers:
+    SmoothQuantModifier:
+      smoothing_strength: 0.5
+      mappings:
+      - !!python/tuple
+        - ['re:.*q_proj', 're:.*k_proj', 're:.*v_proj']
+        - re:.*input_layernorm
+      - !!python/tuple
+        - ['re:.*gate_proj', 're:.*up_proj']
+        - re:.*post_attention_layernorm
+      ignore: []
+    GPTQModifier:
+      targets: [Linear]
+      ignore: [lm_head]
+      scheme: W8A8
+      block_size: 128
+      dampening_frac: 0.01
+      actorder: static
+      offload_hessians: false

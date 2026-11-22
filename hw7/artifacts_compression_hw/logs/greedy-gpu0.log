@@ -1,0 +1,42 @@
+2026-11-22T16:14:41+00:00 START imports
+2026-11-22T16:14:41+00:00 FINISH imports 0.87s
+2026-11-22T16:14:41+00:00 START config
+{'torch': '2.8.0+cu126', 'transformers': '4.55.2', 'datasets': '4.1.1', 'llmcompressor': '0.8.1', 'compressed-tensors': '0.12.2', 'numpy': '2.2.6', 'safetensors': '0.8.0'}
+2026-11-22T16:14:41+00:00 FINISH config 0.01s
+2026-11-22T16:14:41+00:00 START load-dataset
+DatasetDict({
+    train: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 11514
+    })
+    validation: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2033
+    })
+    test: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2974
+    })
+})
+2026-11-22T16:14:43+00:00 FINISH load-dataset 1.35s
+2026-11-22T16:14:43+00:00 START parse-gold
+2026-11-22T16:14:43+00:00 FINISH parse-gold 0.00s
+2026-11-22T16:14:43+00:00 START cfb89075
+Число классов: 60 типов slots: 54
+2026-11-22T16:14:44+00:00 FINISH cfb89075 0.80s
+2026-11-22T16:14:44+00:00 START model-config
+Device: cuda:0
+2026-11-22T16:14:46+00:00 FINISH model-config 2.56s
+2026-11-22T16:14:46+00:00 START model-functions
+2026-11-22T16:14:46+00:00 FINISH model-functions 0.00s
+2026-11-22T16:14:46+00:00 START metrics
+2026-11-22T16:14:46+00:00 FINISH metrics 0.00s
+GPU: NVIDIA A100-SXM4-80GB
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.03it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.03it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.41it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.24it/s]
+Dev:   0%|          | 0/1 [00:00<?, ?it/s]Dev: 100%|██████████| 1/1 [00:02<00:00,  2.17s/it]Dev: 100%|██████████| 1/1 [00:02<00:00,  2.17s/it]
+/home/edu/codex_hw7_llm_20261122/.venv/lib/python3.12/site-packages/transformers/quantizers/auto.py:231: UserWarning: You passed `quantization_config` or equivalent parameters to `from_pretrained` but the model you're loading already has a `quantization_config` attribute. The `quantization_config` from the model will be used.However, loading attributes (e.g. ['run_compressed']) will be overwritten with the one you passed to `from_pretrained`. The rest will be ignored.
+  warnings.warn(warning_msg)
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.04s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.06s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.08s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.16it/s]
+Decompressing model: 0it [00:00, ?it/s]Decompressing model: 1it [00:00,  3.13it/s]Decompressing model: 2it [00:00,  3.21it/s]Decompressing model: 3it [00:00,  3.33it/s]Decompressing model: 4it [00:01,  3.85it/s]Decompressing model: 5it [00:01,  4.16it/s]Decompressing model: 6it [00:01,  4.28it/s]Decompressing model: 7it [00:01,  4.53it/s]Decompressing model: 7it [00:01,  4.04it/s]
+Dev:   0%|          | 0/1 [00:00<?, ?it/s]Dev: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]Dev: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+Verified modes: ['greedy_search', 'greedy_search']

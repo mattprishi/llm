@@ -1,0 +1,40 @@
+2026-11-22T16:59:07+00:00 START imports
+2026-11-22T16:59:11+00:00 FINISH imports 3.47s
+2026-11-22T16:59:11+00:00 START config
+{'torch': '2.8.0+cu126', 'transformers': '4.55.2', 'datasets': '4.1.1', 'llmcompressor': '0.8.1', 'compressed-tensors': '0.12.2', 'numpy': '2.2.6', 'safetensors': '0.8.0'}
+2026-11-22T16:59:11+00:00 FINISH config 0.01s
+2026-11-22T16:59:11+00:00 START load-dataset
+DatasetDict({
+    train: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 11514
+    })
+    validation: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2033
+    })
+    test: Dataset({
+        features: ['id', 'locale', 'partition', 'scenario', 'intent', 'utt', 'annot_utt', 'worker_id', 'slot_method', 'judgments'],
+        num_rows: 2974
+    })
+})
+2026-11-22T16:59:12+00:00 FINISH load-dataset 1.38s
+2026-11-22T16:59:12+00:00 START parse-gold
+2026-11-22T16:59:12+00:00 FINISH parse-gold 0.00s
+2026-11-22T16:59:12+00:00 START cfb89075
+Число классов: 60 типов slots: 54
+2026-11-22T16:59:13+00:00 FINISH cfb89075 0.88s
+2026-11-22T16:59:13+00:00 START model-config
+Device: cuda:0
+2026-11-22T16:59:13+00:00 FINISH model-config 0.15s
+2026-11-22T16:59:13+00:00 START model-functions
+2026-11-22T16:59:13+00:00 FINISH model-functions 0.00s
+2026-11-22T16:59:13+00:00 START metrics
+2026-11-22T16:59:13+00:00 FINISH metrics 0.00s
+GPU: NVIDIA A100-SXM4-80GB
+/home/edu/codex_hw7_llm_20261122/.venv/lib/python3.12/site-packages/transformers/quantizers/auto.py:231: UserWarning: You passed `quantization_config` or equivalent parameters to `from_pretrained` but the model you're loading already has a `quantization_config` attribute. The `quantization_config` from the model will be used.However, loading attributes (e.g. ['run_compressed']) will be overwritten with the one you passed to `from_pretrained`. The rest will be ignored.
+  warnings.warn(warning_msg)
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.12s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.14s/it]
+<class 'compressed_tensors.linear.compressed_linear.CompressedLinear'> targets=['Linear'] weights=QuantizationArgs(num_bits=8, type='int', symmetric=True, group_size=None, strategy='channel', block_structure=None, dynamic=False, actorder=None, observer='minmax', observer_kwargs={}) input_activations=QuantizationArgs(num_bits=8, type='int', symmetric=True, group_size=None, strategy='token', block_structure=None, dynamic=True, actorder=None, observer=None, observer_kwargs={}) output_activations=None format='int-quantized' QuantizationStatus.COMPRESSED
+Dev:   0%|          | 0/1 [00:00<?, ?it/s]Dev: 100%|██████████| 1/1 [00:10<00:00, 10.44s/it]Dev: 100%|██████████| 1/1 [00:10<00:00, 10.44s/it]
+<class 'compressed_tensors.linear.compressed_linear.CompressedLinear'> QuantizationStatus.FROZEN {'quality': 0.0625, 'intent_accuracy': 0.125, 'slot_micro_f1': 0.0, 'frame_exact_match': 0.125, 'valid_json_rate': 0.375, 'n': 8}

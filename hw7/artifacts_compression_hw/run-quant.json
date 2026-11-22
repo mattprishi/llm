@@ -1,0 +1,25 @@
+{
+  "stage": "quant",
+  "status": "completed",
+  "started_at": "2026-11-22T16:15:15+00:00",
+  "finished_at": "2026-11-22T17:24:37+00:00",
+  "elapsed_seconds": 4162.0,
+  "peak_allocated_gib": 16.722,
+  "peak_reserved_gib": 18.178,
+  "configurations_by_gpu": {
+    "0": [
+      "gptq_massive",
+      "gptq_wikitext",
+      "awq_massive"
+    ],
+    "1": [
+      "sq_05_massive",
+      "sq_08_massive"
+    ]
+  },
+  "worker_reports": [
+    "run-quant-gpu0.json",
+    "run-quant-sq08.json",
+    "run-quant-sq05.json"
+  ]
+}

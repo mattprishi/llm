@@ -1,0 +1,61 @@
+{
+  "stage": "student",
+  "started_at": "2026-11-22T16:26:39+00:00",
+  "status": "completed",
+  "cells": [
+    {
+      "id": "imports",
+      "elapsed_seconds": 3.44
+    },
+    {
+      "id": "config",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "id": "load-dataset",
+      "elapsed_seconds": 1.32
+    },
+    {
+      "id": "parse-gold",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "cfb89075",
+      "elapsed_seconds": 0.79
+    },
+    {
+      "id": "model-config",
+      "elapsed_seconds": 0.15
+    },
+    {
+      "id": "model-functions",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "metrics",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "b0fa8cc9",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "73d6086d",
+      "elapsed_seconds": 4.02
+    },
+    {
+      "id": "30e7767b",
+      "elapsed_seconds": 149.08
+    },
+    {
+      "id": "a9d3342d",
+      "elapsed_seconds": 838.1
+    }
+  ],
+  "elapsed_seconds": 1007.78,
+  "active_cell": null,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "peak_allocated_gib": 40.048,
+  "peak_reserved_gib": 46.279,
+  "finished_at": "2026-11-22T16:43:27+00:00"
+}
